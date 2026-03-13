@@ -11,14 +11,14 @@ client = Groq(
     api_key=api_key
 )
 
-message = input("Enter message:")
+prompt = input("Enter prompt:")
 
 completion = client.chat.completions.create(
     model=model_name,
     messages=[
         {
             "role": "user",
-            "content": message,
+            "content": prompt,
         }
     ],
 )
